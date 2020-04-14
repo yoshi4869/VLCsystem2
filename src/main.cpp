@@ -79,7 +79,7 @@ void setup() {
   //割り込みSWの設定
   pinMode(interruptPin, INPUT_PULLUP);
   pinMode(LEDpin, OUTPUT);
-  attachInterrupt(digitalPinToInterrupt(interruptPin), outputLED, LOW);
+  //attachInterrupt(digitalPinToInterrupt(interruptPin), outputLED, LOW);
   //LEDピンの設定
   pinMode(LEDpin, OUTPUT);
   for(int i = LEDpin ;i < LEDpin + 6;i++){
@@ -87,6 +87,6 @@ void setup() {
   }
 }
 void loop() {
-  //turnOff();
+  outputLED();
 }
 
